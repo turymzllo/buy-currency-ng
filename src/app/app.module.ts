@@ -11,11 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { QuotesComponent } from './components/quotes/quotes.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    QuotesComponent,
+    PurchaseComponent
   ],
   imports: [
     BrowserModule,
