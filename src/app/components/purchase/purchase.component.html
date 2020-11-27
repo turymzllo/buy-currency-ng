@@ -1,1 +1,23 @@
-<p>purchase works!</p>
+<app-quotes></app-quotes>       
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Create a Purchase</mat-card-title>
+    </mat-card-header>
+    <mat-card-content> 
+            <mat-form-field appearance="standard">
+                <mat-label>User Id</mat-label>
+                <input matInput placeholder="Number">
+              </mat-form-field>
+              <mat-form-field appearance="standard">
+                <mat-label>Currency</mat-label>
+                <input matInput placeholder="Currency ISO code">
+              </mat-form-field>
+              
+              <mat-form-field appearance="standard">
+                <mat-label>Amount</mat-label>
+                <input matInput placeholder="Number">
+              </mat-form-field>
+              <br />
+              <button mat-raised-button color="primary">Buy</button>
+    </mat-card-content>
+  </mat-card>
