@@ -1,6 +1,4 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { CurrentQuote } from 'src/app/models/current-quote';
 import { QuoteService } from '../../services/quote.service'
 
@@ -13,7 +11,9 @@ export class QuotesComponent implements OnInit {
   usd: CurrentQuote;
   brl: CurrentQuote;
 
-  constructor(private quoteService: QuoteService) {
+  constructor(
+    private quoteService: QuoteService
+  ) {
     this.usd = {
       id: "USD",
       sale: 0,

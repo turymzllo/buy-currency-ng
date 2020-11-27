@@ -1,23 +1,25 @@
-<app-quotes></app-quotes>       
+<app-quotes></app-quotes>
 <mat-card>
-    <mat-card-header>
-      <mat-card-title>Create a Purchase</mat-card-title>
-    </mat-card-header>
-    <mat-card-content> 
-            <mat-form-field appearance="standard">
-                <mat-label>User Id</mat-label>
-                <input matInput placeholder="Number">
-              </mat-form-field>
-              <mat-form-field appearance="standard">
-                <mat-label>Currency</mat-label>
-                <input matInput placeholder="Currency ISO code">
-              </mat-form-field>
-              
-              <mat-form-field appearance="standard">
-                <mat-label>Amount</mat-label>
-                <input matInput placeholder="Number">
-              </mat-form-field>
-              <br />
-              <button mat-raised-button color="primary">Buy</button>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>Create a Purchase</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="purchaseForm">
+      <mat-form-field appearance="standard">
+        <mat-label>User Id</mat-label>
+        <input matInput type="number" formControlName="userId" placeholder="Number">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>Currency</mat-label>
+        <input matInput type="string" formControlName="isoCurrencyCode" placeholder="Currency ISO code">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" formControlName="amountARGCurrency" placeholder="Number">
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" [disabled]="purchaseForm.invalid" (click)="onBuy()">Buy</button>
+    </form>
+  </mat-card-content>
+</mat-card>
